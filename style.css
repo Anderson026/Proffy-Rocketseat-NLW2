@@ -24,7 +24,21 @@
     font-size: 60%; /* controle das medidas rem */
 
 }
+/* espaçamentos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* soma o tamano do padding com o da largura e altura */
+}
+
+html, body {
+    height: 100vh;
+}
 
 body {
     background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
