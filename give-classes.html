@@ -1,0 +1,67 @@
+<!-- Tag html <html>
+    Na tag <head> irá as configurações do meu documento.
+    Na tag <body> irá todo o meu conteúdo visível na página -->
+<!-- HTML
+    Lingaugem de marcação de Hipertexto
+-->
+<!DOCTYPE html>
+<html lang="pt_br"><!-- lang é um atibuto -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- alt + z = ajusta a página para a tela do vscode -->
+    <meta name="theme-color" content="#8257E5">
+    <title>Profy | Sua plataforma de estudos online</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+   
+     <link rel="stylesheet" href="/styles/main.css"><!-- Link do CSS -->
+     <link rel="stylesheet" href="/styles/partials/header.css">
+     <link rel="stylesheet" href="/styles/partials/forms.css">
+     <link rel="stylesheet" href="/styles/partials/page-give-classes.css">
+     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+</head>
+<body id="page-give-classes">
+
+    <div id="container">
+        <header class="page-header">
+            <div class="top-bar-container">
+                <a href="/">
+                    <img src="/images/icons/back.svg" alt="Voltar">
+                </a>
+                <img src="/images/logo.svg" alt="Proffy">
+            </div>
+            <dov class="header-content">
+                <strong>Que incrível que você pode dar aulas</strong><!-- tag com negrito -->
+                <p>O primeiro passo, é preencher esse formulário de inscrição</p>
+            </dov>
+        </header>
+
+        <main><!-- tag para o conteúdo principal da página -->
+            <form action="" id="create-class">
+                <fieldset>
+                    <legend>Seus dados</legend>
+                    
+                    <div class="input-block">
+                        <label for="name">Nome completo</label>
+                        <input name="name" id="name" required><!-- required informa que o campo é obrigatório para preenchimento -->
+                    </div>
+                        <div class="input-block">
+                            <label for="avatar" id="avatar">Link da sua foto <small>(comece com https://)</small></label><!-- a tag small deixa os textos em tamanho menor -->
+                            <input name="avatar" id="avatar" type="url" required>
+                         </div>
+                    <div class="input-block">
+                        <label for="whatsapp">Whatsapp <small>(somente números)</small></label>
+                        <input name="whatsapp" id="whatsapp" type="number" required>
+                    </div>
+                    <div class="textarea-block">
+                        <label for="bio">Biografia</label>
+                        <textarea name="bio" id="bio" required></textarea><!-- textarea cria um bloco de texto -->
+                    </div>
+
+                </fieldset>
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>
+<!-- Parei aos 00:10:10 do vídeo 3 do NLW 2 -->
