@@ -26,7 +26,7 @@ function pageLanding(req, res) {
 }
 /* pegando os dados da página study e retornar na segunda rota ger */
 function pageStudy(req, res) {
-    return res.render("study.html")
+    return res.render("study.html", { proffys })
 }
 
 function pageGiveClasses(req, res) {
@@ -56,3 +56,4 @@ server.get("/give-classes", pageGiveClasses)
 server.listen(5500, () => {/* configurando a porta de comunicação */
     console.log('Servidor rodando na porta 5500');
 })
+/* parei em 01:15:00 do vídeo 4 da nlw 2 */
