@@ -8,7 +8,8 @@ const server = express()/* colocando o express na variável server */
 const {
     pageLanding,
     pageStudy,
-    pageGiveClasses
+    pageGiveClasses,
+    saveClasses
 } = require('./pages')
 
 /* importando o nunjucks */
@@ -18,6 +19,8 @@ nunjucks.configure('src/views', {
     express: server,
     noCache: true,/* não guardar os arquivos no cache */
 })
+/* receber os dados do req.body */
+server.use(express.urlencoded({ extended: true}))
 
 /* configurar arquivos estáticos (css, scripts, imagens) */
 server.use(express.static("public"))
@@ -27,6 +30,8 @@ server.get("/", pageLanding)
 server.get("/study", pageStudy)
 
 server.get("/give-classes", pageGiveClasses)
+
+server.post("/save-classes", saveClasses)
 
 server.listen(5500, () => {/* configurando a porta de comunicação */
     console.log('Servidor rodando na porta 5500');
