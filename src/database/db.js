@@ -32,4 +32,4 @@ const Database = require('sqlite-async')
  /* criando o banco de dados */
  module.exports = Database.open(__dirname + '/database.sqlite').then(execute)
 
- 
+ //01:13:53
