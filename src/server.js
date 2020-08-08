@@ -1,3 +1,4 @@
+/* Dados */
 const proffys = [
     { name: "Diego Fernandes",
       avatar: "https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4",
@@ -20,13 +21,37 @@ const proffys = [
       time_to: [1220]
     }
 ]
+
+const subjects = [
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "Educação física",
+    "Física",
+    "Geografia",
+    "História",
+    "Matemática",
+    "Português",
+    "Química",
+]
+
+const weekdays = [
+    "Segunda-feira",
+    "Domingo",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+]
 /* função para pegar o html e retornar na rota get */
 function pageLanding(req, res) {
     return res.render("index.html")
 }
 /* pegando os dados da página study e retornar na segunda rota ger */
 function pageStudy(req, res) {
-    return res.render("study.html", { proffys })
+    const filters = req.query/* variável para retornar os dados para o frontend */
+    return res.render("study.html", { proffys, filters, subjects, weekdays })
 }
 
 function pageGiveClasses(req, res) {
