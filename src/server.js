@@ -44,6 +44,8 @@ const weekdays = [
     "Sexta-feira",
     "Sábado",
 ]
+/* funcionalidades */
+
 /* função para pegar o html e retornar na rota get */
 function pageLanding(req, res) {
     return res.render("index.html")
@@ -55,7 +57,19 @@ function pageStudy(req, res) {
 }
 
 function pageGiveClasses(req, res) {
-    return res.render("give-classes.html")
+    const data = req.query
+
+    const isNotEmpty = Object.keys(data).length > 0
+    /* se tiver dados */
+    if (isNotEmpty){
+        /* adicionar dados a lista de proffys */
+        proffys.push(data)
+
+        return res.redirect("/study")
+    }
+    
+    /*  se não, mostrar a página  */ 
+    return res.render("give-classes.html", {subjects, weekdays})
 }
 
 const express = require('express')/* importando o express */
