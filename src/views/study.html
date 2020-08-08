@@ -70,6 +70,11 @@
 
         <main><!-- tag para o conteúdo principal da página -->
 
+            <!-- Se não tiver proffys -->
+            {% if proffys == "" %}
+                <p class="no-results">Nenhum professor encontrado com a sua pesquisa.</p>
+            {% else %}
+
             {%for proffy in proffys %}<!-- criando um for para pegar os dados do backend -->
                 <article class="teacher-item"><!-- tag para arquivos ou artigos -->
                     <header>
@@ -94,6 +99,8 @@
                     </footer>
                 </article>
             {%endfor%}
+
+            {% endif %}
 
         </main>
     </div>
