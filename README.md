@@ -1,7 +1,7 @@
 <h1 align="center">Projeto Happy da NLW #03</h1>
 
 <img src="./github-img/proffy.gif">
-<p align="center">Proffy é uma aplicação com o facilitar a o acesso a aulas particulares</p>
+<p align="center">Proffy é uma aplicação com o facilitar o acesso a aulas particulares.</p>
 
 ## Tecnologias utilizadas:
 
@@ -17,4 +17,4 @@
 - Instale as dependências com o comando (npm install)
 - Acesse no navegador no (http://localhost:5500)
 
-<p align="start">Projeto feito com o objetivo de ter uma visão gerão e prática dos conceitos de HTML, CSS e JS.</p>
+<p align="start">Projeto feito com o objetivo de ter uma visão geral e prática dos conceitos de HTML, CSS e JS.</p>
