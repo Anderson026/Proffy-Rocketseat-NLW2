@@ -1,4 +1,4 @@
-<h1 align="center">Projeto Happy da NLW #03</h1>
+<h1 align="center">Projeto Proffy da NLW #02</h1>
 
 <img src="./github-img/proffy.gif">
 <p align="center">Proffy é uma aplicação com o facilitar o acesso a aulas particulares.</p>
